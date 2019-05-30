@@ -1,22 +1,29 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import wishModule from './modules/wishItem';
+// import authModule from './modules/auth';
 
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
   state: {
-    someValue: '123'
+    someValue: 123
+  },
+  actions: {
   },
   mutations: {
     change(state, someValue) {
       state.someValue = someValue;
+    },
+    increment() {
+      this.state.someValue++;
     }
   },
   getters: {
-    someValue: state => state.someValue
+    someValueMinusTen: state => { return state.someValue - 10; }
   },
   modules: {
-    wish: wishModule
+    wish: wishModule,
+    // auth: authModule,
   }
 });

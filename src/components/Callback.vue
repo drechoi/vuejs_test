@@ -1,5 +1,8 @@
 <template>
-  <div class="callback">Logging in.. Please wait</div>
+  <div class="callback">
+    <p>Logging in.. Please wait</p>
+  </div>
+
 </template>
 
 <script>
