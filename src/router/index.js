@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import auth from '@/auth/authService';
 
-import HelloWorld from '@/components/HelloWorld';
+import Home from '@/components/Home';
 import Callback from '@/components/Callback';
 import Profile from '@/views/Profile';
 import ShowData from '@/views/showData';
@@ -15,8 +15,8 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'Home',
+      component: Home
     },
     {
       path: '/callback',
