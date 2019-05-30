@@ -14,15 +14,16 @@ module.exports = {
     'plugin:vue/essential', 
     // https://github.com/standard/standard/blob/master/docs/RULES-en.md
     'standard'
-  ],
+    ],
   // required to lint *.vue files
   plugins: [
-    'vue'
+  'vue'
   ],
   // add your custom rules here
   rules: {
-	semi: [2, "always"],
-	'space-before-function-paren': ["error", "never"],
+   semi: [2, "always"],
+   "comma-dangle": ["error", "only-multiline"],
+   'space-before-function-paren': ["error", "never"],
     // allow async-await
     'generator-star-spacing': 'off',
     // allow debugger during development
