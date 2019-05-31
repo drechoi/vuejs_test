@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import auth from '@/auth/authService';
 
-import Home from '@/components/Home';
+import Home from '@/views/HomeView';
 import Callback from '@/components/Callback';
 import Profile from '@/views/Profile';
 import ShowData from '@/views/showData';

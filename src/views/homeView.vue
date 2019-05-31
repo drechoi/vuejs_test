@@ -1,17 +1,30 @@
 <template>
   <div>
-    <wishList :todos="$store.state.wish.wishItems" />
+    <p>
+      --- this is Debug ---
+    </p>
+    <p>
+      --- this is user info ---
+    </p>
+    <UserInfo />
+
+    <p>
+      --- this is wish list ---
+    </p>
+    <WishList :todos="$store.state.wish.wishItems" />
   </div>
 </template>
 
 <script>
 import WishList from '@/components/wishList';
 import WishItem from '@/components/wishItem';
+import UserInfo from '@/components/UserInfo';
 
 export default {
   components: {
     WishList,
     WishItem,
+    UserInfo,
   },
   computed: {
   },

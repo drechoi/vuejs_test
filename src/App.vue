@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <topNav v-bind:appName="appName" />
+    <topNav :app-name="appName" />
     <b-container>
       <router-view/>
     </b-container>
@@ -12,15 +12,15 @@ import topNav from '@/components/TopMenu';
 
 export default {
   name: 'App',
+  components: {
+    topNav,
+  },
   data() {
     return {
       appName: 'Unicorn',
       isAuthenticated: false,
       profile: this.$auth.profile
     };
-  },
-  components: {
-    topNav,
   },
   async created() {
     try {
@@ -49,6 +49,5 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
 }
 </style>

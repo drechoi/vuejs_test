@@ -1,22 +1,32 @@
 <template>
   <div>
-    // JavaScrit expressions in Vue are enclosed in double curly brackets.
-    <p>Completed Tasks: {{todos.filter(todo => {return todo.done === true}).length}}</p>
-    <p>Pending Tasks: {{todos.filter(todo => {return todo.done === false}).length}}</p>
-    <b-card-group>
-      <b-card v-for="todo in todos" :key="todo.id" style="max-width: 20rem;" class="mb-2" title="Card Title">
-        <div class='header'>
-          {{ todo.title }}
-        </div>
-        <b-card-text>{{ todo.description }}</b-card-text>
-        <b-button href="#" variant="primary">Go somewhere</b-button>
-      </b-card>
+    <b-dropdown
+      id="dropdown-1"
+      text="Filter"
+      class="m-md-2">
+      <b-dropdown-item>Filter</b-dropdown-item>
+    </b-dropdown>
+    <b-card-group deck>
+      <createWishItem />
+      <wishItem v-for="todo in todos" :key="todo.id" :item="todo" />
     </b-card-group>
+
+    <p>Completed Tasks: {{ todos.filter(todo => { return todo.done === true }).length }}</p>
+    <p>Pending Tasks: {{ todos.filter(todo => { return todo.status === 'New' }).length }}</p>
   </div>
 </template>
 
 <script>
+import wishItem from '@/components/wishItem';
+import createWishItem from '@/components/createWishItem';
+
 export default {
-  props: ['todos']
+  components: { wishItem, createWishItem },
+  props: {
+    todos: {
+      type: Array,
+      default: null,
+    }
+  },
 };
 </script>

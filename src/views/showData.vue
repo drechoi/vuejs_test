@@ -7,11 +7,14 @@
     <p>
       Store state : {{ $store.state.wish }}
     </p>
-    <b-button variant="primary">Primary</b-button>
+    <b-button
+      variant="primary">Primary</b-button>
 
-    <div v-for="(value, name, index) in object" v-bind:key="index">
+    <div
+      v-for="(value, name, index) in object"
+      :key="index">
       <b-container>
-        <b-card v-bind:title='name'>
+        <b-card :title="name">
           <b-card-text>{{ value }}</b-card-text>
         </b-card>
       </b-container>
