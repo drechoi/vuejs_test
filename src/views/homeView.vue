@@ -4,9 +4,12 @@
       --- this is Debug ---
     </p>
     <p>
-      --- this is user info ---
+      --- this is Current user info ---
     </p>
-    <UserInfo />
+    <UserInfo user-name="Bartholomew" />
+    <p />
+
+    <UserInfo user-name="Caitlyn"/>
 
     <p>
       --- this is wish list ---
