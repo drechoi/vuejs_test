@@ -50,10 +50,14 @@
 
 <script>
 export default {
-  props: {},
+  props: {
+    appName: {
+      type: String,
+      default: null,
+    }
+  },
   data() {
     return {
-      appName: null,
       profile: this.$auth.profile,
       isAuthenticated: false,
     };
